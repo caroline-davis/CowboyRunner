@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F13994361E78FA240092E4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13994351E78FA240092E4CE /* AppDelegate.swift */; };
-		F13994381E78FA240092E4CE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13994371E78FA240092E4CE /* GameScene.sks */; };
 		F139943A1E78FA240092E4CE /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13994391E78FA240092E4CE /* Actions.sks */; };
-		F139943C1E78FA240092E4CE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139943B1E78FA240092E4CE /* GameScene.swift */; };
 		F139943E1E78FA240092E4CE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139943D1E78FA240092E4CE /* GameViewController.swift */; };
 		F13994411E78FA240092E4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F139943F1E78FA240092E4CE /* Main.storyboard */; };
 		F13994431E78FA240092E4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13994421E78FA240092E4CE /* Assets.xcassets */; };
@@ -30,6 +28,8 @@
 		F13994801E78FA630092E4CE /* Player 11.png in Resources */ = {isa = PBXBuildFile; fileRef = F13994751E78FA630092E4CE /* Player 11.png */; };
 		F13994831E78FA8B0092E4CE /* Jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = F13994821E78FA8B0092E4CE /* Jump.wav */; };
 		F13994861E78FAAC0092E4CE /* RosewoodStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */; };
+		F139948A1E78FEA70092E4CE /* GameplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13994891E78FEA70092E4CE /* GameplayScene.sks */; };
+		F139948C1E78FF410092E4CE /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139948B1E78FF410092E4CE /* GameplayScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,7 @@
 /* Begin PBXFileReference section */
 		F13994321E78FA240092E4CE /* CowboyRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CowboyRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13994351E78FA240092E4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F13994371E78FA240092E4CE /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F13994391E78FA240092E4CE /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		F139943B1E78FA240092E4CE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F139943D1E78FA240092E4CE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F13994401E78FA240092E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F13994421E78FA240092E4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		F13994751E78FA630092E4CE /* Player 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 11.png"; sourceTree = "<group>"; };
 		F13994821E78FA8B0092E4CE /* Jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump.wav; sourceTree = "<group>"; };
 		F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RosewoodStd-Regular.otf"; sourceTree = "<group>"; };
+		F13994891E78FEA70092E4CE /* GameplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameplayScene.sks; sourceTree = "<group>"; };
+		F139948B1E78FF410092E4CE /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				F13994341E78FA240092E4CE /* CowboyRunner */,
+				F13994881E78FE880092E4CE /* Classes */,
+				F13994871E78FE7C0092E4CE /* Scenes */,
 				F13994691E78FA350092E4CE /* Assets */,
 				F139944F1E78FA240092E4CE /* CowboyRunnerTests */,
 				F139945A1E78FA240092E4CE /* CowboyRunnerUITests */,
@@ -131,9 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F13994351E78FA240092E4CE /* AppDelegate.swift */,
-				F13994371E78FA240092E4CE /* GameScene.sks */,
 				F13994391E78FA240092E4CE /* Actions.sks */,
-				F139943B1E78FA240092E4CE /* GameScene.swift */,
 				F139943D1E78FA240092E4CE /* GameViewController.swift */,
 				F139943F1E78FA240092E4CE /* Main.storyboard */,
 				F13994421E78FA240092E4CE /* Assets.xcassets */,
@@ -203,6 +203,22 @@
 				F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		F13994871E78FE7C0092E4CE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F13994891E78FEA70092E4CE /* GameplayScene.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		F13994881E78FE880092E4CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F139948B1E78FF410092E4CE /* GameplayScene.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +334,7 @@
 				F13994411E78FA240092E4CE /* Main.storyboard in Resources */,
 				F139947B1E78FA630092E4CE /* Player 6.png in Resources */,
 				F13994861E78FAAC0092E4CE /* RosewoodStd-Regular.otf in Resources */,
-				F13994381E78FA240092E4CE /* GameScene.sks in Resources */,
+				F139948A1E78FEA70092E4CE /* GameplayScene.sks in Resources */,
 				F13994771E78FA630092E4CE /* Player 2.png in Resources */,
 				F139947D1E78FA630092E4CE /* Player 8.png in Resources */,
 				F13994431E78FA240092E4CE /* Assets.xcassets in Resources */,
@@ -357,7 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F139943C1E78FA240092E4CE /* GameScene.swift in Sources */,
+				F139948C1E78FF410092E4CE /* GameplayScene.swift in Sources */,
 				F139943E1E78FA240092E4CE /* GameViewController.swift in Sources */,
 				F13994361E78FA240092E4CE /* AppDelegate.swift in Sources */,
 			);
