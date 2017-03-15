@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F13994361E78FA240092E4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13994351E78FA240092E4CE /* AppDelegate.swift */; };
+		F13994381E78FA240092E4CE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13994371E78FA240092E4CE /* GameScene.sks */; };
+		F139943A1E78FA240092E4CE /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13994391E78FA240092E4CE /* Actions.sks */; };
+		F139943C1E78FA240092E4CE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139943B1E78FA240092E4CE /* GameScene.swift */; };
+		F139943E1E78FA240092E4CE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139943D1E78FA240092E4CE /* GameViewController.swift */; };
+		F13994411E78FA240092E4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F139943F1E78FA240092E4CE /* Main.storyboard */; };
+		F13994431E78FA240092E4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13994421E78FA240092E4CE /* Assets.xcassets */; };
+		F13994461E78FA240092E4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13994441E78FA240092E4CE /* LaunchScreen.storyboard */; };
+		F13994511E78FA240092E4CE /* CowboyRunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13994501E78FA240092E4CE /* CowboyRunnerTests.swift */; };
+		F139945C1E78FA240092E4CE /* CowboyRunnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139945B1E78FA240092E4CE /* CowboyRunnerUITests.swift */; };
+		F13994761E78FA630092E4CE /* Player 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F139946B1E78FA630092E4CE /* Player 1.png */; };
+		F13994771E78FA630092E4CE /* Player 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F139946C1E78FA630092E4CE /* Player 2.png */; };
+		F13994781E78FA630092E4CE /* Player 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F139946D1E78FA630092E4CE /* Player 3.png */; };
+		F13994791E78FA630092E4CE /* Player 4.png in Resources */ = {isa = PBXBuildFile; fileRef = F139946E1E78FA630092E4CE /* Player 4.png */; };
+		F139947A1E78FA630092E4CE /* Player 5.png in Resources */ = {isa = PBXBuildFile; fileRef = F139946F1E78FA630092E4CE /* Player 5.png */; };
+		F139947B1E78FA630092E4CE /* Player 6.png in Resources */ = {isa = PBXBuildFile; fileRef = F13994701E78FA630092E4CE /* Player 6.png */; };
+		F139947C1E78FA630092E4CE /* Player 7.png in Resources */ = {isa = PBXBuildFile; fileRef = F13994711E78FA630092E4CE /* Player 7.png */; };
+		F139947D1E78FA630092E4CE /* Player 8.png in Resources */ = {isa = PBXBuildFile; fileRef = F13994721E78FA630092E4CE /* Player 8.png */; };
+		F139947E1E78FA630092E4CE /* Player 9.png in Resources */ = {isa = PBXBuildFile; fileRef = F13994731E78FA630092E4CE /* Player 9.png */; };
+		F139947F1E78FA630092E4CE /* Player 10.png in Resources */ = {isa = PBXBuildFile; fileRef = F13994741E78FA630092E4CE /* Player 10.png */; };
+		F13994801E78FA630092E4CE /* Player 11.png in Resources */ = {isa = PBXBuildFile; fileRef = F13994751E78FA630092E4CE /* Player 11.png */; };
+		F13994831E78FA8B0092E4CE /* Jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = F13994821E78FA8B0092E4CE /* Jump.wav */; };
+		F13994861E78FAAC0092E4CE /* RosewoodStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F139944D1E78FA240092E4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F139942A1E78FA240092E4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F13994311E78FA240092E4CE;
+			remoteInfo = CowboyRunner;
+		};
+		F13994581E78FA240092E4CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F139942A1E78FA240092E4CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F13994311E78FA240092E4CE;
+			remoteInfo = CowboyRunner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F13994321E78FA240092E4CE /* CowboyRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CowboyRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13994351E78FA240092E4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F13994371E78FA240092E4CE /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F13994391E78FA240092E4CE /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		F139943B1E78FA240092E4CE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F139943D1E78FA240092E4CE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F13994401E78FA240092E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F13994421E78FA240092E4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F13994451E78FA240092E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F13994471E78FA240092E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F139944C1E78FA240092E4CE /* CowboyRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CowboyRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13994501E78FA240092E4CE /* CowboyRunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CowboyRunnerTests.swift; sourceTree = "<group>"; };
+		F13994521E78FA240092E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13994571E78FA240092E4CE /* CowboyRunnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CowboyRunnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F139945B1E78FA240092E4CE /* CowboyRunnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CowboyRunnerUITests.swift; sourceTree = "<group>"; };
+		F139945D1E78FA240092E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F139946B1E78FA630092E4CE /* Player 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 1.png"; sourceTree = "<group>"; };
+		F139946C1E78FA630092E4CE /* Player 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 2.png"; sourceTree = "<group>"; };
+		F139946D1E78FA630092E4CE /* Player 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 3.png"; sourceTree = "<group>"; };
+		F139946E1E78FA630092E4CE /* Player 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 4.png"; sourceTree = "<group>"; };
+		F139946F1E78FA630092E4CE /* Player 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 5.png"; sourceTree = "<group>"; };
+		F13994701E78FA630092E4CE /* Player 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 6.png"; sourceTree = "<group>"; };
+		F13994711E78FA630092E4CE /* Player 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 7.png"; sourceTree = "<group>"; };
+		F13994721E78FA630092E4CE /* Player 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 8.png"; sourceTree = "<group>"; };
+		F13994731E78FA630092E4CE /* Player 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 9.png"; sourceTree = "<group>"; };
+		F13994741E78FA630092E4CE /* Player 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 10.png"; sourceTree = "<group>"; };
+		F13994751E78FA630092E4CE /* Player 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player 11.png"; sourceTree = "<group>"; };
+		F13994821E78FA8B0092E4CE /* Jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump.wav; sourceTree = "<group>"; };
+		F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RosewoodStd-Regular.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F139942F1E78FA240092E4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13994491E78FA240092E4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13994541E78FA240092E4CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F13994291E78FA240092E4CE = {
+			isa = PBXGroup;
+			children = (
+				F13994341E78FA240092E4CE /* CowboyRunner */,
+				F13994691E78FA350092E4CE /* Assets */,
+				F139944F1E78FA240092E4CE /* CowboyRunnerTests */,
+				F139945A1E78FA240092E4CE /* CowboyRunnerUITests */,
+				F13994331E78FA240092E4CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F13994331E78FA240092E4CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F13994321E78FA240092E4CE /* CowboyRunner.app */,
+				F139944C1E78FA240092E4CE /* CowboyRunnerTests.xctest */,
+				F13994571E78FA240092E4CE /* CowboyRunnerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F13994341E78FA240092E4CE /* CowboyRunner */ = {
+			isa = PBXGroup;
+			children = (
+				F13994351E78FA240092E4CE /* AppDelegate.swift */,
+				F13994371E78FA240092E4CE /* GameScene.sks */,
+				F13994391E78FA240092E4CE /* Actions.sks */,
+				F139943B1E78FA240092E4CE /* GameScene.swift */,
+				F139943D1E78FA240092E4CE /* GameViewController.swift */,
+				F139943F1E78FA240092E4CE /* Main.storyboard */,
+				F13994421E78FA240092E4CE /* Assets.xcassets */,
+				F13994441E78FA240092E4CE /* LaunchScreen.storyboard */,
+				F13994471E78FA240092E4CE /* Info.plist */,
+			);
+			path = CowboyRunner;
+			sourceTree = "<group>";
+		};
+		F139944F1E78FA240092E4CE /* CowboyRunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F13994501E78FA240092E4CE /* CowboyRunnerTests.swift */,
+				F13994521E78FA240092E4CE /* Info.plist */,
+			);
+			path = CowboyRunnerTests;
+			sourceTree = "<group>";
+		};
+		F139945A1E78FA240092E4CE /* CowboyRunnerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F139945B1E78FA240092E4CE /* CowboyRunnerUITests.swift */,
+				F139945D1E78FA240092E4CE /* Info.plist */,
+			);
+			path = CowboyRunnerUITests;
+			sourceTree = "<group>";
+		};
+		F13994691E78FA350092E4CE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F13994841E78FA8F0092E4CE /* Fonts */,
+				F13994811E78FA6F0092E4CE /* Sounds */,
+				F139946A1E78FA420092E4CE /* Player */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		F139946A1E78FA420092E4CE /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				F139946B1E78FA630092E4CE /* Player 1.png */,
+				F139946C1E78FA630092E4CE /* Player 2.png */,
+				F139946D1E78FA630092E4CE /* Player 3.png */,
+				F139946E1E78FA630092E4CE /* Player 4.png */,
+				F139946F1E78FA630092E4CE /* Player 5.png */,
+				F13994701E78FA630092E4CE /* Player 6.png */,
+				F13994711E78FA630092E4CE /* Player 7.png */,
+				F13994721E78FA630092E4CE /* Player 8.png */,
+				F13994731E78FA630092E4CE /* Player 9.png */,
+				F13994741E78FA630092E4CE /* Player 10.png */,
+				F13994751E78FA630092E4CE /* Player 11.png */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		F13994811E78FA6F0092E4CE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F13994821E78FA8B0092E4CE /* Jump.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		F13994841E78FA8F0092E4CE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F13994311E78FA240092E4CE /* CowboyRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13994601E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunner" */;
+			buildPhases = (
+				F139942E1E78FA240092E4CE /* Sources */,
+				F139942F1E78FA240092E4CE /* Frameworks */,
+				F13994301E78FA240092E4CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CowboyRunner;
+			productName = CowboyRunner;
+			productReference = F13994321E78FA240092E4CE /* CowboyRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F139944B1E78FA240092E4CE /* CowboyRunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13994631E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunnerTests" */;
+			buildPhases = (
+				F13994481E78FA240092E4CE /* Sources */,
+				F13994491E78FA240092E4CE /* Frameworks */,
+				F139944A1E78FA240092E4CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F139944E1E78FA240092E4CE /* PBXTargetDependency */,
+			);
+			name = CowboyRunnerTests;
+			productName = CowboyRunnerTests;
+			productReference = F139944C1E78FA240092E4CE /* CowboyRunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F13994561E78FA240092E4CE /* CowboyRunnerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13994661E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunnerUITests" */;
+			buildPhases = (
+				F13994531E78FA240092E4CE /* Sources */,
+				F13994541E78FA240092E4CE /* Frameworks */,
+				F13994551E78FA240092E4CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F13994591E78FA240092E4CE /* PBXTargetDependency */,
+			);
+			name = CowboyRunnerUITests;
+			productName = CowboyRunnerUITests;
+			productReference = F13994571E78FA240092E4CE /* CowboyRunnerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F139942A1E78FA240092E4CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Caroline Davis";
+				TargetAttributes = {
+					F13994311E78FA240092E4CE = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2UNXUT4D3C;
+						ProvisioningStyle = Automatic;
+					};
+					F139944B1E78FA240092E4CE = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2UNXUT4D3C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F13994311E78FA240092E4CE;
+					};
+					F13994561E78FA240092E4CE = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2UNXUT4D3C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F13994311E78FA240092E4CE;
+					};
+				};
+			};
+			buildConfigurationList = F139942D1E78FA240092E4CE /* Build configuration list for PBXProject "CowboyRunner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F13994291E78FA240092E4CE;
+			productRefGroup = F13994331E78FA240092E4CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F13994311E78FA240092E4CE /* CowboyRunner */,
+				F139944B1E78FA240092E4CE /* CowboyRunnerTests */,
+				F13994561E78FA240092E4CE /* CowboyRunnerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F13994301E78FA240092E4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13994411E78FA240092E4CE /* Main.storyboard in Resources */,
+				F139947B1E78FA630092E4CE /* Player 6.png in Resources */,
+				F13994861E78FAAC0092E4CE /* RosewoodStd-Regular.otf in Resources */,
+				F13994381E78FA240092E4CE /* GameScene.sks in Resources */,
+				F13994771E78FA630092E4CE /* Player 2.png in Resources */,
+				F139947D1E78FA630092E4CE /* Player 8.png in Resources */,
+				F13994431E78FA240092E4CE /* Assets.xcassets in Resources */,
+				F139947F1E78FA630092E4CE /* Player 10.png in Resources */,
+				F13994461E78FA240092E4CE /* LaunchScreen.storyboard in Resources */,
+				F139943A1E78FA240092E4CE /* Actions.sks in Resources */,
+				F13994761E78FA630092E4CE /* Player 1.png in Resources */,
+				F139947E1E78FA630092E4CE /* Player 9.png in Resources */,
+				F13994831E78FA8B0092E4CE /* Jump.wav in Resources */,
+				F139947A1E78FA630092E4CE /* Player 5.png in Resources */,
+				F13994781E78FA630092E4CE /* Player 3.png in Resources */,
+				F13994791E78FA630092E4CE /* Player 4.png in Resources */,
+				F139947C1E78FA630092E4CE /* Player 7.png in Resources */,
+				F13994801E78FA630092E4CE /* Player 11.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F139944A1E78FA240092E4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13994551E78FA240092E4CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F139942E1E78FA240092E4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F139943C1E78FA240092E4CE /* GameScene.swift in Sources */,
+				F139943E1E78FA240092E4CE /* GameViewController.swift in Sources */,
+				F13994361E78FA240092E4CE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13994481E78FA240092E4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13994511E78FA240092E4CE /* CowboyRunnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F13994531E78FA240092E4CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F139945C1E78FA240092E4CE /* CowboyRunnerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F139944E1E78FA240092E4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F13994311E78FA240092E4CE /* CowboyRunner */;
+			targetProxy = F139944D1E78FA240092E4CE /* PBXContainerItemProxy */;
+		};
+		F13994591E78FA240092E4CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F13994311E78FA240092E4CE /* CowboyRunner */;
+			targetProxy = F13994581E78FA240092E4CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F139943F1E78FA240092E4CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13994401E78FA240092E4CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F13994441E78FA240092E4CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13994451E78FA240092E4CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F139945E1E78FA240092E4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F139945F1E78FA240092E4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F13994611E78FA240092E4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2UNXUT4D3C;
+				INFOPLIST_FILE = CowboyRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedavis.CowboyRunner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F13994621E78FA240092E4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2UNXUT4D3C;
+				INFOPLIST_FILE = CowboyRunner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedavis.CowboyRunner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F13994641E78FA240092E4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2UNXUT4D3C;
+				INFOPLIST_FILE = CowboyRunnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedavis.CowboyRunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CowboyRunner.app/CowboyRunner";
+			};
+			name = Debug;
+		};
+		F13994651E78FA240092E4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2UNXUT4D3C;
+				INFOPLIST_FILE = CowboyRunnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedavis.CowboyRunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CowboyRunner.app/CowboyRunner";
+			};
+			name = Release;
+		};
+		F13994671E78FA240092E4CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2UNXUT4D3C;
+				INFOPLIST_FILE = CowboyRunnerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedavis.CowboyRunnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CowboyRunner;
+			};
+			name = Debug;
+		};
+		F13994681E78FA240092E4CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2UNXUT4D3C;
+				INFOPLIST_FILE = CowboyRunnerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedavis.CowboyRunnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CowboyRunner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F139942D1E78FA240092E4CE /* Build configuration list for PBXProject "CowboyRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F139945E1E78FA240092E4CE /* Debug */,
+				F139945F1E78FA240092E4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13994601E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13994611E78FA240092E4CE /* Debug */,
+				F13994621E78FA240092E4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F13994631E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13994641E78FA240092E4CE /* Debug */,
+				F13994651E78FA240092E4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F13994661E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunnerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13994671E78FA240092E4CE /* Debug */,
+				F13994681E78FA240092E4CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F139942A1E78FA240092E4CE /* Project object */;
+}
