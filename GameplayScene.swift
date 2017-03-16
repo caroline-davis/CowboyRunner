@@ -49,6 +49,14 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         if firstBody.node?.name == "Player" && secondBody.node?.name == "Ground" {
             canJump = true
         }
+        
+        if firstBody.node?.name == "Player" && secondBody.node?.name == "Obstacle" {
+            
+        }
+        
+        if firstBody.node?.name == "Player" && secondBody.node?.name == "Cactus" {
+            // kill the player and prompt buttons for restarting or quitting
+        }
     }
     
     func initialize(){
@@ -59,6 +67,10 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         createGrounds()
         createPlayer()
         createObstacles()
+        
+        Timer.scheduledTimer(timeInterval: TimeInterval(randomBetweenNumbers(firstNumber: 2.5, secondNumber: 6)), target: self, selector: #selector(GameplayScene.spawnObstacles), userInfo: nil, repeats: true)
+        
+      //  Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(GameplayScene.incrementScore), userInfo: nil, repeats: true)
     }
     
     func createPlayer() {
@@ -163,6 +175,31 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
          
             
         }
+        
+    }
+    
+    func spawnObstacles() {
+        
+        // returns a random number
+        let index = Int(arc4random_uniform(UInt32(obstacles.count)))
+        
+        // need to put .copy() or app crashes - it cant add more than 1 of the same obstacle
+        let obstacle = obstacles[index].copy() as! SKSpriteNode
+        
+        obstacle.position = CGPoint(x: self.frame.width + obstacle.size.width, y: 50)
+        
+        let move = SKAction.moveTo(x: -(self.frame.size.width * 2), duration: TimeInterval(15))
+        let remove = SKAction.removeFromParent()
+        let sequence = SKAction.sequence([move, remove])
+        
+        obstacle.run(sequence)
+        
+        self.addChild(obstacle)
+    }
+    
+    func randomBetweenNumbers(firstNumber: CGFloat, secondNumber: CGFloat) -> CGFloat{
+        
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNumber - secondNumber) + min(firstNumber, secondNumber)
         
     }
     
