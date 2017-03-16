@@ -12,6 +12,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     var player = Player()
     
+    var obstacles = [SKSpriteNode]()
+    
     var canJump = false
     
     override func didMove(to view: SKView) {
@@ -24,7 +26,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if canJump == true {
-            // so it can only jump once when it hits the ground, not multiple times. like superman 
+            // so it can only jump once when it hits the ground, not multiple times. like superman
             canJump = false
             player.jump()
         }
@@ -50,12 +52,13 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initialize(){
-        // need this to make it all work!!!!
+        // need this to make the jumping work!!!
         physicsWorld.contactDelegate = self
         
         createBg()
         createGrounds()
         createPlayer()
+        createObstacles()
     }
     
     func createPlayer() {
@@ -134,6 +137,35 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }))
 
     }
+    
+    func createObstacles() {
+        
+        for i in 0...5 {
+            
+            let obstacle = SKSpriteNode(imageNamed: "Obstacle \(i)")
+            
+            if i == 0 {
+                obstacle.name = "Cactus"
+                obstacle.setScale(0.4)
+            } else {
+                obstacle.name = "Obstacle"
+                obstacle.setScale(0.5)
+            }
+            
+            obstacle.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            obstacle.zPosition = 1
+            
+            obstacle.physicsBody = SKPhysicsBody(rectangleOf: obstacle.size)
+            obstacle.physicsBody?.allowsRotation = false
+            obstacle.physicsBody?.categoryBitMask = ColliderType.Obstacle
+            
+            obstacles.append(obstacle)
+         
+            
+        }
+        
+    }
+    
     
     
 }
