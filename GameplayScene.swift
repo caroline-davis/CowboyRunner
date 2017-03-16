@@ -8,7 +8,11 @@
 
 import SpriteKit
 
-class GameplayScene: SKScene {
+class GameplayScene: SKScene, SKPhysicsContactDelegate {
+    
+    var player = Player()
+    
+    var canJump = false
     
     override func didMove(to view: SKView) {
         initialize()
@@ -18,11 +22,48 @@ class GameplayScene: SKScene {
         moveBackgroundsAndGrounds()
     }
     
-    func initialize(){
-        createBg()
-        createGrounds()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if canJump == true {
+            // so it can only jump once when it hits the ground, not multiple times. like superman 
+            canJump = false
+            player.jump()
+        }
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        // need this to make physicsbody delegate to work for the jumping
+        
+        var firstBody = SKPhysicsBody()
+        var secondBody = SKPhysicsBody()
+        
+        if contact.bodyA.node?.name == "Player" {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if firstBody.node?.name == "Player" && secondBody.node?.name == "Ground" {
+            canJump = true
+        }
+    }
+    
+    func initialize(){
+        // need this to make it all work!!!!
+        physicsWorld.contactDelegate = self
+        
+        createBg()
+        createGrounds()
+        createPlayer()
+    }
+    
+    func createPlayer() {
+        player = Player(imageNamed: "Player 1")
+        player.initialize()
+        player.position = CGPoint(x: -10, y: 20)
+        self.addChild(player)
+    }
     
     
     func createBg() {
@@ -33,6 +74,7 @@ class GameplayScene: SKScene {
             //  allows all backgrounds to come after the other on the horizontal scale
             bg.position = CGPoint(x: CGFloat(i) * bg.size.width, y: 0)
             bg.zPosition = 0
+       
             self.addChild(bg)
             
         }
@@ -46,6 +88,13 @@ class GameplayScene: SKScene {
             //  allows all backgrounds to come after the other on the horizontal scale
             ground.position = CGPoint(x: CGFloat(i) * ground.size.width, y: -(self.frame.size.height / 2))
             ground.zPosition = 3
+            ground.physicsBody = SKPhysicsBody(rectangleOf: ground.size)
+            ground.physicsBody?.affectedByGravity = false
+            // stops the player pushing the ground down cos he's heavy
+            ground.physicsBody?.isDynamic = false
+            ground.physicsBody?.categoryBitMask = ColliderType.Ground
+            
+            
             self.addChild(ground)
             
         }

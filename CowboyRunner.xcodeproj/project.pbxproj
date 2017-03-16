@@ -30,6 +30,7 @@
 		F13994861E78FAAC0092E4CE /* RosewoodStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */; };
 		F139948A1E78FEA70092E4CE /* GameplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13994891E78FEA70092E4CE /* GameplayScene.sks */; };
 		F139948C1E78FF410092E4CE /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139948B1E78FF410092E4CE /* GameplayScene.swift */; };
+		F1C768531E7A29C0005E3C04 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C768521E7A29C0005E3C04 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RosewoodStd-Regular.otf"; sourceTree = "<group>"; };
 		F13994891E78FEA70092E4CE /* GameplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameplayScene.sks; sourceTree = "<group>"; };
 		F139948B1E78FF410092E4CE /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayScene.swift; sourceTree = "<group>"; };
+		F1C768521E7A29C0005E3C04 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,9 +218,26 @@
 		F13994881E78FE880092E4CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F139948B1E78FF410092E4CE /* GameplayScene.swift */,
+				F1C768541E7A29C7005E3C04 /* Player Class */,
+				F1C768511E7A29AC005E3C04 /* Scene Classes */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		F1C768511E7A29AC005E3C04 /* Scene Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F139948B1E78FF410092E4CE /* GameplayScene.swift */,
+			);
+			name = "Scene Classes";
+			sourceTree = "<group>";
+		};
+		F1C768541E7A29C7005E3C04 /* Player Class */ = {
+			isa = PBXGroup;
+			children = (
+				F1C768521E7A29C0005E3C04 /* Player.swift */,
+			);
+			name = "Player Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C768531E7A29C0005E3C04 /* Player.swift in Sources */,
 				F139948C1E78FF410092E4CE /* GameplayScene.swift in Sources */,
 				F139943E1E78FA240092E4CE /* GameViewController.swift in Sources */,
 				F13994361E78FA240092E4CE /* AppDelegate.swift in Sources */,
@@ -624,6 +644,7 @@
 				F13994621E78FA240092E4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F13994631E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -632,6 +653,7 @@
 				F13994651E78FA240092E4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F13994661E78FA240092E4CE /* Build configuration list for PBXNativeTarget "CowboyRunnerUITests" */ = {
 			isa = XCConfigurationList;
@@ -640,6 +662,7 @@
 				F13994681E78FA240092E4CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
