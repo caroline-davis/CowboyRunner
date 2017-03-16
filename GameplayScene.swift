@@ -17,16 +17,22 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     var movePlayer = false
     var playerOnObstacle = false
     
+    var isAlive = false
+    var spawner = Timer()
+    
     override func didMove(to view: SKView) {
         initialize()
     }
     
     override func update(_ currentTime: TimeInterval) {
-        moveBackgroundsAndGrounds()
-        
+        if isAlive {
+            moveBackgroundsAndGrounds()
+        }
         if movePlayer {
             player.position.x -= 9
         }
+        
+        checkPlayersBounds()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -73,6 +79,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         
         if firstBody.node?.name == "Player" && secondBody.node?.name == "Cactus" {
             // kill the player and prompt buttons for restarting or quitting
+            playerDied()
         }
     }
     
@@ -101,12 +108,14 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         // need this to make the jumping work!!!
         physicsWorld.contactDelegate = self
         
+        isAlive = true
+        
         createBg()
         createGrounds()
         createPlayer()
         createObstacles()
         
-        Timer.scheduledTimer(timeInterval: TimeInterval(randomBetweenNumbers(firstNumber: 2.5, secondNumber: 6)), target: self, selector: #selector(GameplayScene.spawnObstacles), userInfo: nil, repeats: true)
+        spawner = Timer.scheduledTimer(timeInterval: TimeInterval(randomBetweenNumbers(firstNumber: 2.5, secondNumber: 6)), target: self, selector: #selector(GameplayScene.spawnObstacles), userInfo: nil, repeats: true)
         
       //  Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(GameplayScene.incrementScore), userInfo: nil, repeats: true)
     }
@@ -241,7 +250,53 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func checkPlayersBounds() {
+        if isAlive {
+            if player.position.x < -(self.frame.width / 2) - 35 {
+                playerDied()
+            }
+        }
+    }
     
+    func playerDied() {
+        
+        player.removeFromParent()
+        
+        // gets rid of the current obstacles on the screen when player dies
+        for child in children {
+            if child.name == "Obstacle" || child.name == "Cactus" {
+                child.removeFromParent()
+            }
+        }
+        
+        // stops the repeating of the spawning of the objects
+        spawner.invalidate()
+        
+        isAlive = false
+        
+        let restart = SKSpriteNode(imageNamed: "Restart")
+        let quit = SKSpriteNode(imageNamed: "Quit")
+        
+        restart.name = "Restart"
+        restart.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        restart.position = CGPoint(x: -200, y: -150)
+        restart.zPosition = 10
+        restart.setScale(0)
+        
+        quit.name = "Quit"
+        quit.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        quit.position = CGPoint(x: 200, y: -150)
+        quit.zPosition = 10
+        quit.setScale(0)
+        
+        let scaleUp = SKAction.scale(to: 1, duration: TimeInterval(0.5))
+        
+        restart.run(scaleUp)
+        quit.run(scaleUp)
+        
+        self.addChild(restart)
+        self.addChild(quit)
+    }
     
 }
 
