@@ -11,10 +11,11 @@ import SpriteKit
 class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     var player = Player()
-    
     var obstacles = [SKSpriteNode]()
     
     var canJump = false
+    var movePlayer = false
+    var playerOnObstacle = false
     
     override func didMove(to view: SKView) {
         initialize()
@@ -22,12 +23,21 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: TimeInterval) {
         moveBackgroundsAndGrounds()
+        
+        if movePlayer {
+            player.position.x -= 9
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if canJump == true {
             // so it can only jump once when it hits the ground, not multiple times. like superman
             canJump = false
+            player.jump()
+            
+        }
+        // now we can jump off obstacle
+        if playerOnObstacle {
             player.jump()
         }
     }
@@ -47,16 +57,44 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if firstBody.node?.name == "Player" && secondBody.node?.name == "Ground" {
+            // can jump will only be true when it is on the ground
             canJump = true
         }
         
         if firstBody.node?.name == "Player" && secondBody.node?.name == "Obstacle" {
-            
+            // if we are on top of the obstacle canjump wont be true because it wont be on the ground it will be on the obstacle.
+            if !canJump {
+                movePlayer = true
+                // when this is set to true, in touches began player can now jump as canjump is set to true when playeronobstacle is set to true
+                playerOnObstacle = true
+                
+            }
         }
         
         if firstBody.node?.name == "Player" && secondBody.node?.name == "Cactus" {
             // kill the player and prompt buttons for restarting or quitting
         }
+    }
+    
+    // resets everything to before the obstacle
+    func didEnd(_ contact: SKPhysicsContact) {
+        var firstBody = SKPhysicsBody()
+        var secondBody = SKPhysicsBody()
+        
+        if contact.bodyA.node?.name == "Player" {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if firstBody.node?.name == "Player" && secondBody.node?.name == "Obstacle" {
+            movePlayer = false
+            playerOnObstacle = false
+            
+        }
+
     }
     
     func initialize(){
