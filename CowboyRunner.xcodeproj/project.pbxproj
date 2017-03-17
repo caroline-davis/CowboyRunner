@@ -30,6 +30,8 @@
 		F13994861E78FAAC0092E4CE /* RosewoodStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */; };
 		F139948A1E78FEA70092E4CE /* GameplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F13994891E78FEA70092E4CE /* GameplayScene.sks */; };
 		F139948C1E78FF410092E4CE /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F139948B1E78FF410092E4CE /* GameplayScene.swift */; };
+		F1C3107B1E7B8FF9006388A9 /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1C3107A1E7B8FF9006388A9 /* MainMenuScene.sks */; };
+		F1C3107D1E7B9020006388A9 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3107C1E7B9020006388A9 /* MainMenuScene.swift */; };
 		F1C768531E7A29C0005E3C04 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C768521E7A29C0005E3C04 /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		F13994851E78FAAC0092E4CE /* RosewoodStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RosewoodStd-Regular.otf"; sourceTree = "<group>"; };
 		F13994891E78FEA70092E4CE /* GameplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameplayScene.sks; sourceTree = "<group>"; };
 		F139948B1E78FF410092E4CE /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayScene.swift; sourceTree = "<group>"; };
+		F1C3107A1E7B8FF9006388A9 /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
+		F1C3107C1E7B9020006388A9 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		F1C768521E7A29C0005E3C04 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F13994891E78FEA70092E4CE /* GameplayScene.sks */,
+				F1C3107A1E7B8FF9006388A9 /* MainMenuScene.sks */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				F139948B1E78FF410092E4CE /* GameplayScene.swift */,
+				F1C3107C1E7B9020006388A9 /* MainMenuScene.swift */,
 			);
 			name = "Scene Classes";
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F13994411E78FA240092E4CE /* Main.storyboard in Resources */,
+				F1C3107B1E7B8FF9006388A9 /* MainMenuScene.sks in Resources */,
 				F139947B1E78FA630092E4CE /* Player 6.png in Resources */,
 				F13994861E78FAAC0092E4CE /* RosewoodStd-Regular.otf in Resources */,
 				F139948A1E78FEA70092E4CE /* GameplayScene.sks in Resources */,
@@ -392,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C3107D1E7B9020006388A9 /* MainMenuScene.swift in Sources */,
 				F1C768531E7A29C0005E3C04 /* Player.swift in Sources */,
 				F139948C1E78FF410092E4CE /* GameplayScene.swift in Sources */,
 				F139943E1E78FA240092E4CE /* GameViewController.swift in Sources */,
