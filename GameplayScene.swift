@@ -13,12 +13,17 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     var player = Player()
     var obstacles = [SKSpriteNode]()
     
+    var scoreLabel = SKLabelNode()
+    var score = Int()
+    
     var canJump = false
     var movePlayer = false
     var playerOnObstacle = false
     
     var isAlive = false
+    
     var spawner = Timer()
+    var counter = Timer()
     
     override func didMove(to view: SKView) {
         initialize()
@@ -138,10 +143,12 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         createGrounds()
         createPlayer()
         createObstacles()
+        getLabel()
         
-        spawner = Timer.scheduledTimer(timeInterval: TimeInterval(randomBetweenNumbers(firstNumber: 2.5, secondNumber: 6)), target: self, selector: #selector(GameplayScene.spawnObstacles), userInfo: nil, repeats: true)
+        spawner = Timer.scheduledTimer(timeInterval: TimeInterval(randomBetweenNumbers(firstNumber: 2.5, secondNumber: 6)), target: self, selector: #selector(spawnObstacles), userInfo: nil, repeats: true)
         
-      //  Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(GameplayScene.incrementScore), userInfo: nil, repeats: true)
+        // increments the score
+        counter = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(incrementScore), userInfo: nil, repeats: true)
     }
     
     func createPlayer() {
@@ -282,6 +289,16 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func getLabel() {
+        scoreLabel = self.childNode(withName: "Score Label") as! SKLabelNode
+        scoreLabel.text = "0M"
+    }
+    
+    func incrementScore() {
+        score += 1
+        scoreLabel.text = "\(score)M"
+    }
+    
     func playerDied() {
         
         player.removeFromParent()
@@ -294,7 +311,9 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }
         
         // stops the repeating of the spawning of the objects
+        // stops the score incrementing
         spawner.invalidate()
+        counter.invalidate()
         
         isAlive = false
         
