@@ -25,6 +25,8 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     var spawner = Timer()
     var counter = Timer()
     
+    var pausePanel = SKSpriteNode()
+    
     override func didMove(to view: SKView) {
         initialize()
     }
@@ -60,6 +62,22 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
                 gameplay!.scaleMode = .aspectFill
                 self.view?.presentScene(gameplay!, transition: SKTransition.doorway(withDuration: TimeInterval(1.5)))
                 
+            }
+            
+            if atPoint(location).name == "Pause" {
+                createPausePanel()
+            }
+
+            
+            if atPoint(location).name == "Resume" {
+                pausePanel.removeFromParent()
+                self.scene?.isPaused = false
+                
+                spawner = Timer.scheduledTimer(timeInterval: TimeInterval(randomBetweenNumbers(firstNumber: 2.5, secondNumber: 6)), target: self, selector: #selector(spawnObstacles), userInfo: nil, repeats: true)
+                
+                // increments the score
+                counter = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(incrementScore), userInfo: nil, repeats: true)
+
             }
 
             
@@ -299,6 +317,42 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.text = "\(score)M"
     }
     
+    
+    func createPausePanel() {
+        
+        self.scene?.isPaused = true
+        
+        spawner.invalidate()
+        counter.invalidate()
+        
+        pausePanel = SKSpriteNode(imageNamed: "Pause Panel")
+        pausePanel.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        pausePanel.position = CGPoint(x: 0, y: 0)
+        pausePanel.zPosition = 10
+        
+        let resume = SKSpriteNode(imageNamed: "Play")
+        let quit = SKSpriteNode(imageNamed: "Quit")
+        
+        resume.name = "Resume"
+        resume.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        resume.position = CGPoint(x: -155, y: 0)
+        resume.setScale(0.75)
+        resume.zPosition = 9
+        
+        quit.name = "Quit"
+        quit.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        quit.position = CGPoint(x: 155, y: 0)
+        quit.setScale(0.75)
+        quit.zPosition = 9
+        
+        // adding the children (resume and quit) to the pause panel
+        pausePanel.addChild(resume)
+        pausePanel.addChild(quit)
+        
+        // adding the pause panel to the scene
+        self.addChild(pausePanel)
+        
+    }
     func playerDied() {
         
         player.removeFromParent()
