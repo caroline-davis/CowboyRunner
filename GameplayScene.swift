@@ -36,6 +36,30 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        for touch in touches {
+        
+            // instead of touch.locationInNode(self)
+        let location = touch.location(in: self)
+            
+            // opens the game
+            if atPoint(location).name == "Restart" {
+              let gameplay = GameplayScene(fileNamed: "GameplayScene")
+                gameplay!.scaleMode = .aspectFill
+                self.view?.presentScene(gameplay!, transition: SKTransition.doorway(withDuration: TimeInterval(1.5)))
+            
+            }
+            // opens the main menu
+            if atPoint(location).name == "Quit" {
+                let gameplay = MainMenuScene(fileNamed: "MainMenuScene")
+                gameplay!.scaleMode = .aspectFill
+                self.view?.presentScene(gameplay!, transition: SKTransition.doorway(withDuration: TimeInterval(1.5)))
+                
+            }
+
+            
+        }
+        
         if canJump == true {
             // so it can only jump once when it hits the ground, not multiple times. like superman
             canJump = false
