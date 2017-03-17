@@ -66,6 +66,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             
             if atPoint(location).name == "Pause" {
                 createPausePanel()
+                return
                 // stop sprite jumping when resume happens.
             }
 
@@ -78,12 +79,12 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
                 
                 // increments the score
                 counter = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(incrementScore), userInfo: nil, repeats: true)
-
+                return
             }
 
             
         }
-        
+
         if canJump == true {
             // so it can only jump once when it hits the ground, not multiple times. like superman
             canJump = false
