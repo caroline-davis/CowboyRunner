@@ -18,7 +18,18 @@ struct ColliderType {
 class Player: SKSpriteNode {
     
     
+    
     func initialize() {
+        // create the walk array
+        var walk = [SKTexture]()
+        
+        for i in 1...11 {
+            let name = "Player \(i)"
+            walk.append(SKTexture(imageNamed: name))
+        }
+        
+        let walkAnimation = SKAction.animate(with: walk, timePerFrame: TimeInterval(0.046), resize: true, restore: true)
+        
         self.name = "Player"
         self.zPosition = 2
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
@@ -32,6 +43,8 @@ class Player: SKSpriteNode {
         self.physicsBody?.collisionBitMask = ColliderType.Ground | ColliderType.Obstacle
         self.physicsBody?.contactTestBitMask = ColliderType.Ground | ColliderType.Obstacle
         
+        self.run(SKAction.repeatForever(walkAnimation))
+        
         
     }
     
@@ -40,7 +53,7 @@ class Player: SKSpriteNode {
         
         // need to normalise velocity, otherwise they get too much boost when it jumps
         self.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-        self.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 200))
+        self.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 240))
         
         
     }
