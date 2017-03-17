@@ -66,6 +66,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             
             if atPoint(location).name == "Pause" {
                 createPausePanel()
+                // stop sprite jumping when resume happens.
             }
 
             
@@ -354,6 +355,13 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         
     }
     func playerDied() {
+        
+        let highScore = UserDefaults.standard.integer(forKey: "Highscore")
+        
+        // sets the current score if the highscore is lower than this
+        if highScore < score {
+            UserDefaults.standard.set(score, forKey: "Highscore")
+        }
         
         player.removeFromParent()
         

@@ -11,6 +11,7 @@ import SpriteKit
     var playBtn = SKSpriteNode()
     var scoreBtn = SKSpriteNode()
     var title = SKLabelNode()
+    var scoreLabel = SKLabelNode()
 
 class MainMenuScene: SKScene {
     
@@ -34,6 +35,8 @@ class MainMenuScene: SKScene {
             
              if atPoint(location) == scoreBtn {
                 // shows the highscore
+                showScore()
+                
             }
         }
     }
@@ -128,6 +131,17 @@ class MainMenuScene: SKScene {
         let sequence = SKAction.sequence([moveUp, moveDown])
         
         title.run(SKAction.repeatForever(sequence))
+    }
+    
+    func showScore() {
+        scoreLabel.removeFromParent()
+        scoreLabel = SKLabelNode(fontNamed: "RosewoodStd-Regular")
+        scoreLabel.fontSize = 180
+        // gets the score
+        scoreLabel.text = "\(UserDefaults.standard.integer(forKey: "Highscore"))"
+        scoreLabel.position = CGPoint(x: 0, y: -200)
+        scoreLabel.zPosition = 9
+        self.addChild(scoreLabel)
     }
 
 }
